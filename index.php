@@ -13,8 +13,6 @@ if (in_array($page.'.func.php',$pages_functions)){
 }
 ?>
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,16 +23,28 @@ if (in_array($page.'.func.php',$pages_functions)){
 </head>
 
 <body>
-<?php
-include 'body/topbar.php';
-?>
+
+        <?php include 'Body/topbar.php';?>
+        <?php include 'Body/fond.php';?>
+        <?php include 'Body/Footer.php'; ?>
 
    <div class="container">
-       <?php include 'pages/'.$pages.'.php';
-       ?>
-</div>
+       <div class="search-box">
+           <input type="text" class="search" placeholder="Rechercher" style="...">
+            <button type="submit" class="search-btn">
+                <i class="fa fa-search"></i>
+            </button>
+       </div>
+   </div>
+       <?php include 'pages/'.$pages.'.php'; ?>
 <script src"js/jquery.js"></script>
-<script src="js/>?php echo $page?>.func.js"> </script>
+<?php $pages_js = scandir('js/');
+    if(in_array($page.'.func.js',$pages_js)){
+        ?>
+<script src="js/<?php echo $page?>.func.js"> </script>
+<?php
+}
+?>
 
 </body>
 </html>
