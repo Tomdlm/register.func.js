@@ -1,8 +1,12 @@
 <div class="topbar">
 
     <span class="menu_haut_partie-gauche"> <!-- span c'est pour aligner les liens -->
-        <a href="">Accueil</a>
-        <a href="index.php?page=Inscription">Mon compte</a>
+        <a href="index.php?page=Accueil" ><img src="Image/logo.png" width="100" height="100" alt="logo"> </a>
+
+        <a href="index.php?page=register">Mon compte</a>
+        <a href="Connexion" > </a>
+        <a href="Inscription"></a>
+        <a href="Deconnexion"></a>
         <a href="Qui-sommes-nous.php">À propos de nous</a>
     </span>
 
